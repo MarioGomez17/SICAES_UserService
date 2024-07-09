@@ -1,4 +1,4 @@
-package UserService.Models;
+package UserService.Entities;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -23,7 +23,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserModel implements Serializable {
+public class UserEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,7 +48,7 @@ public class UserModel implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "IdentificationType_User")
-    private IdentificationTypeModel IdentificationType_User;
+    private IdentificationTypeEntity IdentificationType_User;
 
     @Column(name = "IdentificationNumber_User")
     @Nonnull

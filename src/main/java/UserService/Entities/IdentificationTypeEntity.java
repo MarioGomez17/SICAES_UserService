@@ -1,4 +1,4 @@
-package UserService.Models;
+package UserService.Entities;
 
 import java.io.Serializable;
 import java.util.List;
@@ -22,7 +22,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class IdentificationTypeModel implements Serializable {
+public class IdentificationTypeEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,5 +38,5 @@ public class IdentificationTypeModel implements Serializable {
     private String Symbol_IdentificationType;
 
     @OneToMany(mappedBy = "IdentificationType")
-    private List<UserModel> Users;
+    private List<UserEntity> Users;
 }
