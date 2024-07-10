@@ -11,7 +11,7 @@ import UserService.Services.IUserService;
 import jakarta.transaction.Transactional;
 
 @Service
-public abstract class UserServiceImplementation implements IUserService {
+public class UserServiceImplementation implements IUserService {
 
     private IUserRepository UserRepository;
 
