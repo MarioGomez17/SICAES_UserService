@@ -9,10 +9,12 @@ import UserService.Entities.UserEntity;
 import UserService.Repositories.IUserRepository;
 import UserService.Services.IUserService;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class UserServiceImplementation implements IUserService {
 
+    @Autowired
     private IUserRepository UserRepository;
 
     @Override

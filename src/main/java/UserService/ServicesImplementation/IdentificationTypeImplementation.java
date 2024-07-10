@@ -3,6 +3,7 @@ package UserService.ServicesImplementation;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import UserService.Entities.IdentificationTypeEntity;
@@ -13,6 +14,7 @@ import jakarta.transaction.Transactional;
 @Service
 public abstract class IdentificationTypeImplementation implements IIdentificationTypeService {
 
+    @Autowired
     private IIdentificationTypeRepository IdentificationTypeRepository;
 
     @Override
