@@ -3,11 +3,14 @@ package UserService.ServicesImplementation;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import UserService.Entities.UserEntity;
 import UserService.Repositories.IUserRepository;
 import UserService.Services.IUserService;
 import jakarta.transaction.Transactional;
 
+@Service
 public abstract class UserServiceImplementation implements IUserService {
 
     private IUserRepository UserRepository;

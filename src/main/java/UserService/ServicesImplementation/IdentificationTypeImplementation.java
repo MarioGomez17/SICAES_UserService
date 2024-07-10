@@ -3,11 +3,14 @@ package UserService.ServicesImplementation;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import UserService.Entities.IdentificationTypeEntity;
 import UserService.Repositories.IIdentificationTypeRepository;
 import UserService.Services.IIdentificationTypeService;
 import jakarta.transaction.Transactional;
 
+@Service
 public abstract class IdentificationTypeImplementation implements IIdentificationTypeService {
 
     private IIdentificationTypeRepository IdentificationTypeRepository;
