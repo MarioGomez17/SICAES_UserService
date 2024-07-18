@@ -46,7 +46,7 @@ public class UserServiceImplementation implements IUserService {
     @Override
     @Transactional
     public UserEntity Save(UserEntity User) throws Exception {
-        User.setPassword_User(passwordEncoder.encode(User.getPassword_User()));
+        User.setPassword(passwordEncoder.encode(User.getPassword()));
         try {
             UserEntity SaveUser = this.UserRepository.save(User);
             return SaveUser;
