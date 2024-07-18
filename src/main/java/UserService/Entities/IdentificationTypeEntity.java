@@ -25,15 +25,15 @@ public class IdentificationTypeEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id_IdentificationType")
-    private Long Id_IdentificationType;
+    private Long id;
 
     @Column(name = "Name_IdentificationType")
     @Nonnull
-    private String Name_IdentificationType;
+    private String name;
 
     @Column(name = "Symbol_IdentificationType")
     @Nonnull
-    private String Symbol_IdentificationType;
+    private String symbol;
 
     
 }

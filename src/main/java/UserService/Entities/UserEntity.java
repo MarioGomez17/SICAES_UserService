@@ -28,37 +28,37 @@ public class UserEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id_User")
-    private Long Id_User;
+    private Long id;
 
     @Column(name = "FirstName_User")
     @Nonnull
-    private String FirstName_User;
+    private String firstName;
 
     @Column(name = "SecondName_User")
     @Nullable
-    private String SecondName_User;
+    private String secondName;
 
     @Column(name = "FirstLastName_User")
     @Nonnull
-    private String FirstLastName_User;
+    private String firstLastName;
 
     @Column(name = "SecondLastName_User")
     @Nullable
-    private String SecondLastName_User;
+    private String secondLastName;
 
     @ManyToOne
     @JoinColumn(name = "IdentificationType_User")
-    private IdentificationTypeEntity IdentificationType_User;
+    private IdentificationTypeEntity IdentificationType;
 
     @Column(name = "IdentificationNumber_User")
     @Nonnull
-    private Long IdentificationNumber_User;
+    private Long identificationNumber;
 
     @Column(name = "Password_User")
     @Nonnull
-    private String Password_User;
+    private String password;
 
     @Column(name = "BirthDate_User")
     @Nonnull
-    private Date BirthDate_User;
+    private Date birthDate;
 }
