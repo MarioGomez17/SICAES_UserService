@@ -10,12 +10,16 @@ import UserService.Repositories.IUserRepository;
 import UserService.Services.IUserService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Service
 public class UserServiceImplementation implements IUserService {
 
     @Autowired
     private IUserRepository UserRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     @Transactional
@@ -42,6 +46,7 @@ public class UserServiceImplementation implements IUserService {
     @Override
     @Transactional
     public UserEntity Save(UserEntity User) throws Exception {
+        User.setPassword_User(passwordEncoder.encode(User.getPassword_User()));
         try {
             UserEntity SaveUser = this.UserRepository.save(User);
             return SaveUser;
